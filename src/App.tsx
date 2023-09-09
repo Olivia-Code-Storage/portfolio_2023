@@ -1,10 +1,11 @@
 import { Layout } from './components/common'
-import { Intro } from './components'
+import { Intro, About } from './components'
 
 const App = () => {
   return (
     <Layout>
       <Intro />
+      <About />
     </Layout>
   )
 }

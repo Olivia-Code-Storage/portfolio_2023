@@ -1,3 +1,4 @@
 import Intro from './Intro'
+import About from './About'
 
-export { Intro }
+export { Intro, About }
