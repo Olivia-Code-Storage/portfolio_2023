@@ -1,5 +1,12 @@
+import { Layout } from './components/common'
+import { Intro } from './components'
+
 const App = () => {
-  return <div>{'폰트 테스트'}</div>
+  return (
+    <Layout>
+      <Intro />
+    </Layout>
+  )
 }
 
 export default App
