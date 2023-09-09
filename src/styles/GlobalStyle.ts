@@ -36,6 +36,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Pretendard';
     font-weight: normal;
     font-style: normal;
+    color: #FFFFFF;
     vertical-align: baseline;
     vertical-align: baseline;
   }
