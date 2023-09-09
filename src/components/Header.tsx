@@ -1,26 +1,8 @@
-import { useState, useEffect } from 'react'
 import { styled } from 'styled-components'
 
 const Header = () => {
-  const [scroll, setScroll] = useState(false)
-
-  useEffect(() => {
-    window.addEventListener('scroll', scrollHandler)
-    return () => {
-      window.removeEventListener('scroll', scrollHandler)
-    }
-  }, [])
-
-  const scrollHandler = () => {
-    if (window.scrollY > 80) {
-      setScroll(true)
-    } else {
-      setScroll(false)
-    }
-  }
-
   return (
-    <WrapHeader $scroll={scroll}>
+    <WrapHeader>
       <button type={'button'}>{'HANSOL'}</button>
       <WrapButton>
         <button type={'button'}>{'INTRO'}</button>
@@ -35,7 +17,7 @@ const Header = () => {
 
 export default Header
 
-const WrapHeader = styled.header<{ $scroll: boolean }>`
+const WrapHeader = styled.header`
   width: 100%;
   height: 80px;
   padding: 0 50px;
