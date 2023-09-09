@@ -40,7 +40,7 @@ const IntroduceDiv = styled.div`
     width: 50px;
     height: 450px;
     position: absolute;
-    top: 190px;
+    top: 25%;
     left: 0;
     border-left: 10px solid ${({ theme }) => theme.ab};
   }
@@ -61,7 +61,7 @@ const ScrollDiv = styled.div`
     width: 35px;
     height: 35px;
     position: absolute;
-    background: url(${arrowDown}) 50% 50% no-repeat;
+    background: url(${arrowDown}) center center no-repeat;
     background-size: 35px 35px;
     filter: invert(100%);
   }
