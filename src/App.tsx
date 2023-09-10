@@ -1,5 +1,5 @@
 import { Layout } from './components/common'
-import { Intro, About, Stacks, Projects } from './components'
+import { Intro, About, Stacks, Projects, Contact } from './components'
 
 const App = () => {
   return (
@@ -8,6 +8,7 @@ const App = () => {
       <About />
       <Stacks />
       <Projects />
+      <Contact />
     </Layout>
   )
 }
