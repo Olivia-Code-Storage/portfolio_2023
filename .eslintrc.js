@@ -41,6 +41,7 @@ module.exports = {
     'no-use-before-define': 0,
     'import/no-extraneous-dependencies': 0,
     'no-shadow': 0,
+    'react/no-array-index-key': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 0,
     'jsx-a11y/label-has-associated-control': [
       2,
