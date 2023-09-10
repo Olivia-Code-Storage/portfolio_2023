@@ -23,7 +23,7 @@ export const portfolio = [
     name: 'BELOG',
     team: '개인프로젝트',
     period: '23.08.26 ~ 23.09.01',
-    stacks: '#TypeScript,#React,#Recoil,#Styled-Components#Python,#Flask,#MongoDB',
+    stacks: '#TypeScript,#React,#Recoil,#Styled-Components,#Python,#Flask,#MongoDB',
     links: {
       GitHub: 'https://github.com/Be-log/be-log',
       Blog: 'https://oliviakim.tistory.com/notice/177',
