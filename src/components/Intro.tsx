@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import { arrowDown } from '../assets/ui'
+import { arrow } from '../assets/ui'
 
 const Intro = () => {
   return (
@@ -61,7 +61,7 @@ const ScrollDiv = styled.div`
     width: 35px;
     height: 35px;
     position: absolute;
-    background: url(${arrowDown}) center center no-repeat;
+    background: url(${arrow}) center center no-repeat;
     background-size: 35px 35px;
     filter: invert(100%);
   }

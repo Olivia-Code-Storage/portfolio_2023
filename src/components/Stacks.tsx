@@ -54,7 +54,7 @@ const WrapStacks = styled.section`
   h1 {
     padding: 50px 0 30px 0;
     text-align: center;
-    font-size: 36px;
+    font-size: 45px;
     font-weight: 900;
   }
 `
