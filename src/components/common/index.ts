@@ -1,3 +1,5 @@
 import Layout from './Layout'
+import Tags from './Tags'
+import Buttons from './Buttons'
 
-export { Layout }
+export { Layout, Tags, Buttons }
