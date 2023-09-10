@@ -12,7 +12,7 @@ const Button = ({ links }: ButtonProps) => {
           <img
             width={17}
             height={17}
-            src={name === '바로가기' ? shortcut : name === 'GitHub' ? github : name === 'Belog' ? tistory : notion}
+            src={name === '바로가기' ? shortcut : name === 'GitHub' ? github : name === 'Blog' ? tistory : notion}
             alt={`${name} logo`}
           />
           {name}
@@ -30,7 +30,7 @@ const WrapButtons = styled.div`
 `
 
 const CommonButton = styled.button<{ $name: string }>`
-  padding: 10px;
+  padding: 10px 12px;
   display: flex;
   justify-content: center;
   align-items: center;

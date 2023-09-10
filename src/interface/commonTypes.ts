@@ -13,7 +13,7 @@ export interface ButtonProps {
   links: {
     바로가기?: string
     GitHub: string
-    Belog: string
+    Blog: string
     Notion?: string
   }
 }

@@ -62,7 +62,7 @@ const WrapProjects = styled.section`
   justify-content: center;
   background-image: radial-gradient(rgba(48, 63, 99, 0.8), rgba(21, 30, 47, 0.7), rgba(12, 23, 38, 0.6));
   h1 {
-    padding: 40px 0;
+    padding: 20px 0 40px 0;
     text-align: center;
     font-size: 45px;
     font-weight: 900;
@@ -110,7 +110,7 @@ const ProjectDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 15px;
+  gap: 18px;
   transition: opacity 0.5s ease-in-out;
   h2 {
     margin-top: 10px;

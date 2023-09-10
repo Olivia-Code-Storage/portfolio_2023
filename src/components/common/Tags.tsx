@@ -25,4 +25,5 @@ const CommonTags = styled.span`
   border-radius: 8px;
   background-color: ${({ theme }) => theme.nero};
   font-size: 13px;
+  cursor: default;
 `
