@@ -1,10 +1,9 @@
 import { styled } from 'styled-components'
 import { ButtonProps } from '../../interface/commonTypes'
+import { openLinkHandler } from '../../utils/func/openlinkHandler'
 import { github, notion, shortcut, tistory } from '../../assets/ui'
 
 const Button = ({ links }: ButtonProps) => {
-  const openLinkHandler = (link: string) => window.open(link, '_blank', 'noopener')
-
   return (
     <WrapButtons>
       {Object.entries(links).map(([name, link]) => (
