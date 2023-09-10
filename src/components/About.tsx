@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import { background, astronaut } from '../assets'
+import { background, astronaut } from '../assets/ui'
 
 const About = () => {
   return (

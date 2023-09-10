@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 import { LayoutProps } from '../../interface/commonTypes'
-import { background } from '../../assets'
+import { background } from '../../assets/ui'
 import Header from '../Header'
 
 const Layout = ({ children }: LayoutProps) => {

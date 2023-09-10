@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import { arrowDown } from '../assets'
+import { arrowDown } from '../assets/ui'
 
 const Intro = () => {
   return (
