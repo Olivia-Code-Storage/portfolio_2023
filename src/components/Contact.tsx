@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 import { contact } from '../utils/contact'
-import { openLinkHandler } from '../utils/func/openlinkHandler'
+import { openLinkHandler } from '../utils/func/openLinkHandler'
 
 const Contact = () => {
   return (
@@ -14,8 +14,8 @@ const Contact = () => {
                 {name}
                 <span>{'.'}</span>
               </td>
-              <td onClick={() => openLinkHandler(link)}>
-                <LinkSpan>{link}</LinkSpan>
+              <td onClick={() => openLinkHandler({ name, link })}>
+                <LinkSpan $name={name}>{link}</LinkSpan>
               </td>
             </tr>
           </tbody>
@@ -73,12 +73,12 @@ const ContactTable = styled.table`
   }
   td:last-child {
     width: 70%;
-    cursor: pointer;
   }
 `
 
-const LinkSpan = styled.span`
+const LinkSpan = styled.span<{ $name: string }>`
   padding: 10px;
+  cursor: ${({ $name }) => ($name === 'Email' ? 'drag' : 'pointer')};
   transition:
     background-color 0.3s ease,
     color 0.3s ease;

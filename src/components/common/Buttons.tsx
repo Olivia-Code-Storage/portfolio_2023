@@ -1,13 +1,13 @@
 import { styled } from 'styled-components'
 import { ButtonProps } from '../../interface/commonTypes'
-import { openLinkHandler } from '../../utils/func/openlinkHandler'
+import { openLinkHandler } from '../../utils/func/openLinkHandler'
 import { github, notion, shortcut, tistory } from '../../assets/ui'
 
 const Button = ({ links }: ButtonProps) => {
   return (
     <WrapButtons>
       {Object.entries(links).map(([name, link]) => (
-        <CommonButton key={name} type={'button'} $name={name} onClick={() => openLinkHandler(link)}>
+        <CommonButton key={name} type={'button'} $name={name} onClick={() => openLinkHandler({ link })}>
           <img
             width={17}
             height={17}

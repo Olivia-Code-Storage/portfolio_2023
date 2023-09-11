@@ -12,3 +12,9 @@ export interface StackProps {
   $isHovered: boolean
   $category: string
 }
+
+// openLinkHandler.ts
+export interface LinkProps {
+  name?: string
+  link: string
+}
