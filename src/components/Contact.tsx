@@ -49,7 +49,7 @@ const WrapContact = styled.section`
     align-items: center;
     gap: 5px;
     p {
-      color: gray;
+      color: ${({ theme }) => theme.gray};
       font-style: italic;
     }
   }

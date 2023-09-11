@@ -1,5 +1,4 @@
 export const Color = {
-  white: '#FFFFFF',
   fw: '#2A3E83', // Florida Waters
   cp: '#3C5973', // China Pattern
   ab: '#303F63', // Antarctic Blue
@@ -8,6 +7,7 @@ export const Color = {
   td: '#0C1726', // Trapped Darkness
   kon: '#151E2F',
   nero: '#262626',
+  gray: '#666',
 } as const
 
 export type Color = typeof Color

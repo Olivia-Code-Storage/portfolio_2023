@@ -32,6 +32,7 @@ const Intro = () => {
         <div />
         <div />
       </ScrollDiv>
+      <SentenceP>{'본 페이지는 PC화면에 최적화되어있습니다.'}</SentenceP>
     </WrapIntro>
   )
 }
@@ -57,7 +58,7 @@ const IntroduceDiv = styled.div`
   p::after {
     content: '';
     margin-left: 0.4rem;
-    border-right: 2px solid #666;
+    border-right: 2px solid ${({ theme }) => theme.gray};
     animation: cursor 0.9s infinite steps(2);
   }
   &::before {
@@ -74,7 +75,7 @@ const IntroduceDiv = styled.div`
       border-right: 2px solid #222;
     }
     to {
-      border-right: 2px solid #666;
+      border-right: 2px solid ${({ theme }) => theme.gray};
     }
   }
 `
@@ -116,4 +117,13 @@ const ScrollDiv = styled.div`
       opacity: 0;
     }
   }
+`
+
+const SentenceP = styled.p`
+  margin-right: -210px;
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  color: ${({ theme }) => theme.gray};
+  font-style: italic;
 `

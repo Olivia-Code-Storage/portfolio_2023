@@ -135,6 +135,6 @@ const InfoDiv = styled.div`
     color: ${({ theme }) => theme.xy};
   }
   span:last-child {
-    color: gray;
+    color: ${({ theme }) => theme.gray};
   }
 `
