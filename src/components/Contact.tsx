@@ -8,15 +8,17 @@ const Contact = () => {
       <h1>{'CONTACT'}</h1>
       <ContactTable>
         {contact.map(({ name, link }) => (
-          <tr>
-            <td>
-              {name}
-              <span>{'.'}</span>
-            </td>
-            <td onClick={() => openLinkHandler(link)}>
-              <LinkSpan>{link}</LinkSpan>
-            </td>
-          </tr>
+          <tbody key={name}>
+            <tr>
+              <td>
+                {name}
+                <span>{'.'}</span>
+              </td>
+              <td onClick={() => openLinkHandler(link)}>
+                <LinkSpan>{link}</LinkSpan>
+              </td>
+            </tr>
+          </tbody>
         ))}
       </ContactTable>
       <div>
@@ -37,7 +39,7 @@ const WrapContact = styled.section`
   h1 {
     margin-bottom: 40px;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 900;
   }
   div {
     position: absolute;
@@ -63,6 +65,7 @@ const ContactTable = styled.table`
   }
   td:first-child {
     width: 30%;
+    font-weight: 600;
     span {
       font-size: 40px;
       color: ${({ theme }) => theme.xy};
