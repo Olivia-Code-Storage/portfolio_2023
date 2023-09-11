@@ -1,3 +1,9 @@
+// Header.ts
+export interface HeaderBtnProps {
+  $current: string
+  $name: string
+}
+
 // Stacks.ts
 export interface StackType {
   skill: {
