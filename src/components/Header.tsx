@@ -1,36 +1,38 @@
 import { useEffect, useState } from 'react'
 import { styled } from 'styled-components'
-import { HeaderBtnProps } from '../interface/componentTypes'
 
 const Header = () => {
+  const navInfo = [
+    { name: 'INTRO', start: 0 },
+    { name: 'ABOUT', start: 955 },
+    { name: 'STACKS', start: 1910 },
+    { name: 'PROJECTS', start: 2865 },
+    { name: 'CONTACT', start: 3820 },
+  ]
+
   const [scrollY, setScrollY] = useState(0)
-  const [currentPage, setCurrentPage] = useState('INTRO')
+  const [currentPage, setCurrentPage] = useState('')
 
   useEffect(() => {
-    const scrollHandler = () => setScrollY(window.scrollY)
+    const initialScrollY = window.scrollY
+    setCurrentPage(getCurrentPageName(initialScrollY))
+
+    const scrollHandler = () => {
+      setScrollY(window.scrollY)
+      setCurrentPage(getCurrentPageName(window.scrollY))
+    }
+
     window.addEventListener('scroll', scrollHandler)
+
     return () => {
       window.removeEventListener('scroll', scrollHandler)
     }
   }, [])
 
-  useEffect(() => {
-    if (scrollY >= 0 && scrollY <= 954) {
-      setCurrentPage('INTRO')
-    } else if (scrollY > 954 && scrollY <= 1905) {
-      setCurrentPage('ABOUT')
-    } else if (scrollY > 1905 && scrollY <= 2860) {
-      setCurrentPage('STACKS')
-    } else if (scrollY >= 2860 && scrollY < 3820) {
-      setCurrentPage('PROJECTS')
-    } else if (scrollY >= 3820) {
-      setCurrentPage('CONTACT')
-    }
-  }, [scrollY])
-
-  useEffect(() => {
-    console.log(scrollY)
-  }, [scrollY])
+  const getCurrentPageName = (scrollPosition: number) => {
+    const foundSection = navInfo.find(({ name, start }) => scrollPosition >= start && scrollPosition < start + 955)
+    return foundSection ? foundSection.name : ''
+  }
 
   const moveScrollHandler = (position: number) => {
     window.scrollTo({
@@ -39,29 +41,16 @@ const Header = () => {
     })
   }
 
+  const buttons = navInfo.map(({ name, start }) => (
+    <HeaderBtn key={name} type={'button'} $current={currentPage === name} onClick={() => moveScrollHandler(start)}>
+      {name}
+    </HeaderBtn>
+  ))
+
   return (
     <WrapHeader>
-      <button type={'button'}>{'HANSOL'}</button>
-      <WrapButton>
-        <HeaderBtn type={'button'} $current={currentPage} $name={'INTRO'} onClick={() => moveScrollHandler(0)}>
-          {'INTRO'}
-        </HeaderBtn>
-        <HeaderBtn type={'button'} $current={currentPage} $name={'ABOUT'} onClick={() => moveScrollHandler(955)}>
-          {'ABOUT'}
-        </HeaderBtn>
-        <HeaderBtn type={'button'} $current={currentPage} $name={'STACKS'} onClick={() => moveScrollHandler(1906)}>
-          {'STACKS'}
-        </HeaderBtn>
-        <HeaderBtn type={'button'} $current={currentPage} $name={'PROJECTS'} onClick={() => moveScrollHandler(2861)}>
-          {'PROJECTS'}
-        </HeaderBtn>
-        <HeaderBtn type={'button'} $current={currentPage} $name={'CONTACT'} onClick={() => moveScrollHandler(3820)}>
-          {'CONTACT'}
-        </HeaderBtn>
-        <HeaderBtn type={'button'} $current={currentPage} $name={'CONTACT'} onClick={() => moveScrollHandler(3820)}>
-          {currentPage}
-        </HeaderBtn>
-      </WrapButton>
+      <LogoDiv />
+      <WrapButton>{buttons}</WrapButton>
     </WrapHeader>
   )
 }
@@ -78,14 +67,27 @@ const WrapHeader = styled.header`
   align-items: center;
   transition: all 0.3s ease;
   z-index: 1;
-  button {
-    position: relative;
-    font-size: 18px;
-    font-weight: 600;
+`
+
+const LogoDiv = styled.div`
+  font-size: 22px;
+  font-weight: 800;
+  cursor: default;
+  &::before {
+    content: 'HANSOL';
+    color: white;
   }
-  & > button {
-    font-size: 22px;
-    font-weight: 800;
+  &::after {
+    content: 'OLIVIA';
+    color: transparent;
+    position: absolute;
+    left: 50px;
+  }
+  &:hover::before {
+    color: transparent;
+  }
+  &:hover::after {
+    color: white;
   }
 `
 
@@ -94,17 +96,11 @@ const WrapButton = styled.div`
   gap: 30px;
 `
 
-const HeaderBtn = styled.button<HeaderBtnProps>`
-  &::after {
-    content: '';
-    position: absolute;
-    width: ${({ $current, $name }) => ($current === $name ? '100%' : 0)};
-    top: 25px;
-    left: 50%;
-    border-bottom: 2px solid white;
-    transition: width 0.15s linear;
-    transform: translateX(-50%);
-  }
+const HeaderBtn = styled.button<{ $current: boolean }>`
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  &::after,
   &::before {
     content: '';
     position: absolute;
@@ -114,6 +110,9 @@ const HeaderBtn = styled.button<HeaderBtnProps>`
     border-bottom: 2px solid white;
     transition: width 0.15s linear;
     transform: translateX(-50%);
+  }
+  &::after {
+    width: ${({ $current }) => ($current ? '100%' : 0)};
   }
   &:hover::before {
     width: 100%;
