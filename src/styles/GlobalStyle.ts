@@ -47,6 +47,22 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html { 
+    overflow-y: auto;
+    overflow-x: hidden;
+    ::-webkit-scrollbar {
+      width: 0px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: transparent;
+      border: none;
+    }
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+      border: none;
+    }
+  }
+
   article,
   aside,
   details,

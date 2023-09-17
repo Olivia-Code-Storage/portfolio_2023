@@ -17,6 +17,7 @@ export default Layout
 const WrapLayout = styled.div`
   width: 100%;
   height: 100%;
+  background-color: ${({ theme }) => theme.td};
   background-image: url(${background});
   background-size: contain;
 `
