@@ -1,8 +1,8 @@
 export const contact = [
-  {
-    name: 'Resume',
-    link: 'https://hansolkim.oopy.io',
-  },
+  // {
+  //   name: 'Resume',
+  //   link: 'https://hansolkim.oopy.io',
+  // },
   {
     name: 'Email',
     link: 'dev.hansolkim@gmail.com',
