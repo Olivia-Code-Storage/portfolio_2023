@@ -11,7 +11,7 @@ export const portfolio = [
     links: {
       바로가기: 'https://diediefrontend.vercel.app/',
       GitHub: 'https://github.com/diedielolorg/diediefrontend',
-      Blog: 'https://oliviakim.tistory.com/notice/176',
+      Blog: 'https://oliviakim.tistory.com/178',
       Notion: 'https://diedie.notion.site/diedie/DIEDIE-gg-13f2db91627e49cf8cc31c2242e191e6',
     },
     description:
@@ -26,7 +26,6 @@ export const portfolio = [
     stacks: '#TypeScript,#React,#Recoil,#Styled-Components,#Python,#Flask,#MongoDB',
     links: {
       GitHub: 'https://github.com/Be-log/be-log',
-      Blog: 'https://oliviakim.tistory.com/notice/177',
     },
     description:
       '개발자를 위한 블로그 서비스인 벨로그의 클론 코딩입니다.\n프론트단만 담당했던 기존의 협업 프로젝트를 풀스택 개인 프로젝트로 재구현하였습니다.',
@@ -41,7 +40,6 @@ export const portfolio = [
     links: {
       바로가기: 'https://www.dawhisky.com/',
       GitHub: 'https://github.com/dawhisky/dawhisky-FE',
-      Blog: 'https://oliviakim.tistory.com/notice/175',
       Notion: 'https://team-spirits.oopy.io/',
     },
     description:
