@@ -9,7 +9,6 @@ export const portfolio = [
     period: '23.08.04 ~ 23.09.05',
     stacks: '#TypeScript,#React,#Recoil,#Tanstack-Query,#Styled-Components',
     links: {
-      바로가기: 'https://diediefrontend.vercel.app/',
       GitHub: 'https://github.com/diedielolorg/diediefrontend',
       Blog: 'https://oliviakim.tistory.com/178',
       Notion: 'https://diedie.notion.site/diedie/DIEDIE-gg-13f2db91627e49cf8cc31c2242e191e6',
@@ -38,7 +37,6 @@ export const portfolio = [
     period: '23.05.19 ~ 23.06.30',
     stacks: '#JavaScript,#React,#Recoil,#React-Query,#Styled-Components',
     links: {
-      바로가기: 'https://www.dawhisky.com/',
       GitHub: 'https://github.com/dawhisky/dawhisky-FE',
       Notion: 'https://team-spirits.oopy.io/',
     },
