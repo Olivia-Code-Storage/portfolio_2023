@@ -38,7 +38,7 @@ export const portfolio = [
     stacks: '#JavaScript,#React,#Recoil,#React-Query,#Styled-Components',
     links: {
       GitHub: 'https://github.com/dawhisky/dawhisky-FE',
-      Notion: 'https://team-spirits.oopy.io/',
+      Notion: 'https://team-spirits.notion.site/DA-WHISKY-8cd5298ee7fe4921983d820d87681467?pvs=4',
     },
     description:
       '위스키의 진입 장벽을 낮추기 위한 위스키 체험 온라인 플랫폼입니다.\n공통 컴포넌트 및 전반적인 UI 구현, 무한 스크롤, 카카오맵, 추천 검색어 기능 등을 담당했습니다.',
